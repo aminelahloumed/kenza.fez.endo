@@ -130,5 +130,32 @@ document.querySelectorAll('.nav a').forEach(function(link){
 });
 </script>
 
+
+<div id="opening-popup" class="opening-popup">
+  <div class="popup-card">
+    <button class="popup-close" onclick="closeOpeningPopup()">×</button>
+    <img src="images/logo.png" class="popup-logo" alt="Logo">
+    <p class="popup-small">Cabinet d’endocrinologie</p>
+    <h2>Ouverture très prochaine</h2>
+    <p class="popup-text">
+      Le cabinet du Dr Lahlou Kenza vous accueillera bientôt dans un espace moderne et chaleureux dédié à votre bien‑être.
+    </p>
+    <a href="https://wa.me/212620901200" target="_blank" class="popup-btn">Prendre contact</a>
+  </div>
+</div>
+
+<script>
+function closeOpeningPopup(){
+  const popup=document.getElementById('opening-popup');
+  popup.style.opacity='0';
+  setTimeout(()=>{popup.style.display='none';},300);
+}
+window.addEventListener('load', ()=>{
+  setTimeout(()=>{
+    document.getElementById('opening-popup').classList.add('show');
+  },600);
+});
+</script>
+
 </body>
 </html>
