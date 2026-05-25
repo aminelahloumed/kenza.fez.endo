@@ -239,3 +239,200 @@ footer{background:#320610;color:white;text-align:center;padding:28px}
   .section,.hours{padding:48px 22px}
   .gallery,.specialty-grid,.hours-grid{grid-template-columns:1fr}
 }
+
+
+/* Version finale réelle : photo médecin, photos cabinet, WhatsApp, Instagram */
+.whatsapp{
+  background:#1f9d55 !important;
+  color:white !important;
+  border:0 !important;
+}
+.about-real{
+  display:grid !important;
+  grid-template-columns:380px 1fr !important;
+  gap:60px !important;
+  align-items:center !important;
+  background:linear-gradient(135deg,#fff,#fff7eb) !important;
+}
+.about-real .doctor-photo img{
+  width:100%;
+  border-radius:24px;
+  box-shadow:0 18px 45px rgba(58,6,16,.14);
+  object-fit:cover;
+}
+.about-real .about-text h2{
+  text-align:left;
+  margin-left:0;
+  margin-bottom:24px;
+}
+.about-real .about-text p{
+  color:var(--muted, #6f6065);
+  line-height:1.85;
+  margin-bottom:16px;
+  font-size:17px;
+}
+.social-links{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:22px;
+}
+.social{
+  display:inline-flex;
+  align-items:center;
+  padding:13px 20px;
+  border-radius:10px;
+  font-weight:900;
+  color:white;
+}
+.whatsapp-link{background:#1f9d55}
+.instagram-link{background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045)}
+.floating-whatsapp{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  display:inline-flex;
+  align-items:center;
+  background:#1f9d55;
+  color:white;
+  padding:14px 18px;
+  border-radius:999px;
+  box-shadow:0 12px 28px rgba(0,0,0,.22);
+  z-index:300;
+  font-weight:900;
+}
+.footer-instagram{
+  display:inline-block;
+  margin-top:10px;
+  color:#f2d895;
+  font-weight:800;
+}
+.hero-photo img{
+  object-fit:cover !important;
+  object-position:center center !important;
+}
+.gallery{
+  grid-template-columns:repeat(4,1fr);
+}
+.gallery img{
+  object-fit:cover !important;
+  object-position:center center !important;
+}
+@media(max-width:900px){
+  .about-real{
+    grid-template-columns:1fr !important;
+  }
+}
+@media(max-width:700px){
+  .floating-whatsapp{
+    right:14px;
+    bottom:14px;
+    padding:12px 15px;
+  }
+}
+
+
+/* Ajustement final photo accueil droite */
+.hero-photo{
+  height:430px !important;
+  border-radius:18px !important;
+  overflow:hidden !important;
+  background:#fff8ef !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+}
+
+.hero-photo img{
+  width:100% !important;
+  height:100% !important;
+  object-fit:contain !important;
+  object-position:center center !important;
+  background:#fff8ef !important;
+}
+
+@media(max-width:1150px){
+  .hero-photo{
+    height:auto !important;
+  }
+
+  .hero-photo img{
+    height:auto !important;
+    max-height:520px !important;
+  }
+}
+
+
+/* Ajustement final : photo cabinet validée */
+.hero-photo{
+  height:430px !important;
+  border-radius:18px !important;
+  overflow:hidden !important;
+  background:#fff8ef !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+}
+
+.hero-photo img{
+  width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+  object-position:center center !important;
+}
+
+.gallery img[src*="cabinet-main-final"]{
+  object-fit:cover !important;
+  object-position:center center !important;
+}
+
+@media(max-width:1150px){
+  .hero-photo{
+    height:390px !important;
+  }
+}
+
+@media(max-width:700px){
+  .hero-photo{
+    height:300px !important;
+  }
+}
+
+
+/* Ajustement mobile galerie cabinet */
+@media(max-width:700px){
+  #cabinet .gallery{
+    display:grid !important;
+    grid-template-columns:1fr 1fr !important;
+    gap:14px !important;
+    padding:0 4px !important;
+  }
+
+  #cabinet .gallery img{
+    width:100% !important;
+    height:210px !important;
+    object-fit:cover !important;
+    object-position:center center !important;
+    border-radius:16px !important;
+  }
+
+  #cabinet .gallery img:first-child{
+    grid-column:1 / -1 !important;
+    height:240px !important;
+    object-position:center center !important;
+  }
+}
+
+@media(max-width:430px){
+  #cabinet .gallery{
+    grid-template-columns:1fr !important;
+  }
+
+  #cabinet .gallery img,
+  #cabinet .gallery img:first-child{
+    height:auto !important;
+    max-height:none !important;
+    object-fit:contain !important;
+    background:#fff8ef !important;
+  }
+}
