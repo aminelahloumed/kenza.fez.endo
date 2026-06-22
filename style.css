@@ -526,3 +526,219 @@ footer{background:#320610;color:white;text-align:center;padding:28px}
    font-size:32px;
  }
 }
+
+/* Update final : contenu et photos réelles */
+.hero-photo img{object-fit:cover!important;object-position:center center!important;}
+.about-real{display:grid!important;grid-template-columns:420px 1fr!important;gap:55px!important;align-items:center!important;}
+.about-real .doctor-photo img{width:100%!important;height:520px!important;object-fit:cover!important;object-position:center center!important;border-radius:24px!important;box-shadow:0 18px 45px rgba(58,6,16,.14)!important;}
+.about-real .about-text h2{text-align:left!important;}
+.about-real .about-text p{line-height:1.85!important;}
+.gallery img{object-fit:cover!important;object-position:center center!important;}
+@media(max-width:900px){.about-real{grid-template-columns:1fr!important}.about-real .doctor-photo img{height:auto!important}}
+@media(max-width:700px){#cabinet .gallery{display:grid!important;grid-template-columns:1fr!important;gap:16px!important}#cabinet .gallery img{width:100%!important;height:auto!important;object-fit:contain!important;background:#fff8ef!important}}
+
+/* Version finale download : cadrage propre des photos */
+.hero-photo img{
+  object-fit:cover !important;
+  object-position:center center !important;
+}
+.about-real .doctor-photo img{
+  object-fit:cover !important;
+  object-position:center top !important;
+}
+@media(max-width:700px){
+  .about-real .doctor-photo img{
+    height:auto !important;
+    object-fit:contain !important;
+  }
+}
+
+/* Final last modifs : centrage photo d'accueil + portrait à propos */
+.hero-photo{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  overflow:hidden !important;
+  background:#fff8ef !important;
+}
+
+.hero-photo img{
+  width:100% !important;
+  height:100% !important;
+  object-fit:contain !important;
+  object-position:center center !important;
+  background:#fff8ef !important;
+}
+
+.about-real{
+  display:grid !important;
+  grid-template-columns:420px 1fr !important;
+  gap:55px !important;
+  align-items:center !important;
+}
+
+.about-real .doctor-photo img{
+  width:100% !important;
+  height:520px !important;
+  object-fit:cover !important;
+  object-position:center top !important;
+  border-radius:24px !important;
+  box-shadow:0 18px 45px rgba(58,6,16,.14) !important;
+}
+
+.about-real .about-text h2{
+  text-align:left !important;
+}
+
+@media(max-width:900px){
+  .about-real{
+    grid-template-columns:1fr !important;
+  }
+  .about-real .doctor-photo img{
+    height:auto !important;
+    object-fit:contain !important;
+  }
+}
+
+@media(max-width:700px){
+  .hero-photo{
+    height:auto !important;
+  }
+  .hero-photo img{
+    height:auto !important;
+    object-fit:contain !important;
+  }
+}
+
+/* FIX FINAL EXACT : image accueil centrée + 3 spécialités visibles */
+.hero-photo{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  overflow:hidden !important;
+  background:#fff8ef !important;
+}
+
+.hero-photo img{
+  width:100% !important;
+  height:100% !important;
+  object-fit:contain !important;
+  object-position:center center !important;
+  background:#fff8ef !important;
+}
+
+.specialty-grid{
+  max-width:1180px !important;
+  margin:38px auto 0 !important;
+  display:grid !important;
+  grid-template-columns:repeat(3, 1fr) !important;
+  gap:24px !important;
+}
+
+.specialty-grid article{
+  display:block !important;
+  opacity:1 !important;
+  visibility:visible !important;
+}
+
+.about-real{
+  display:grid !important;
+  grid-template-columns:420px 1fr !important;
+  gap:55px !important;
+  align-items:center !important;
+}
+
+.about-real .doctor-photo img{
+  width:100% !important;
+  height:520px !important;
+  object-fit:cover !important;
+  object-position:center top !important;
+  border-radius:24px !important;
+  box-shadow:0 18px 45px rgba(58,6,16,.14) !important;
+}
+
+@media(max-width:900px){
+  .specialty-grid{
+    grid-template-columns:1fr !important;
+  }
+  .about-real{
+    grid-template-columns:1fr !important;
+  }
+  .about-real .doctor-photo img{
+    height:auto !important;
+    object-fit:contain !important;
+  }
+  .hero-photo{
+    height:auto !important;
+  }
+  .hero-photo img{
+    height:auto !important;
+  }
+}
+
+
+/* Correction photo accueil */
+.hero-photo{
+    padding:0 !important;
+    margin:0 !important;
+    width:100% !important;
+    height:100% !important;
+    overflow:hidden !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+}
+
+.hero-photo img{
+    width:100% !important;
+    height:100% !important;
+    object-fit:cover !important;
+    object-position:center center !important;
+    display:block !important;
+}
+
+/* Supprime les espaces blancs */
+.hero-photo::before,
+.hero-photo::after{
+    display:none !important;
+}
+
+
+/* Correction mobile photo bienvenue */
+@media (max-width: 768px){
+  .hero-photo{
+      min-height: 420px !important;
+      height: 420px !important;
+      overflow:hidden !important;
+  }
+
+  .hero-photo img{
+      width:100% !important;
+      height:100% !important;
+      object-fit:cover !important;
+      object-position:center center !important;
+  }
+}
+
+
+/* Réajustement photo accueil PC */
+.hero-photo{
+    max-height:550px !important;
+    height:550px !important;
+    overflow:hidden !important;
+    border-radius:24px !important;
+}
+
+.hero-photo img{
+    width:100% !important;
+    height:100% !important;
+    object-fit:cover !important;
+    object-position:center center !important;
+}
+
+@media (max-width: 768px){
+  .hero-photo{
+      height:420px !important;
+      max-height:420px !important;
+  }
+}
